@@ -30,12 +30,12 @@ export default async function AdminLoginPage({
         </h1>
 
         {!isSupabaseConfigured ? (
-          <div className="mt-8 rounded-2xl border border-gold/25 bg-gold/5 p-6 text-sm leading-relaxed text-ivory/70">
-            <p className="font-mono text-xs uppercase tracking-[0.14em] text-gold">Supabase не подключён</p>
+          <div className="mt-8 rounded-2xl border border-steel/25 bg-steel/5 p-6 text-sm leading-relaxed text-ivory/70">
+            <p className="font-mono text-xs uppercase tracking-[0.14em] text-steel">Supabase не подключён</p>
             <p className="mt-3">
-              Выполните <code className="text-gold">supabase/schema.sql</code> в SQL Editor вашего проекта Supabase,
-              затем добавьте <code className="text-gold">NEXT_PUBLIC_SUPABASE_URL</code> и{" "}
-              <code className="text-gold">NEXT_PUBLIC_SUPABASE_ANON_KEY</code> в <code className="text-gold">.env.local</code>.
+              Выполните <code className="text-steel">supabase/schema.sql</code> в SQL Editor вашего проекта Supabase,
+              затем добавьте <code className="text-steel">NEXT_PUBLIC_SUPABASE_URL</code> и{" "}
+              <code className="text-steel">NEXT_PUBLIC_SUPABASE_ANON_KEY</code> в <code className="text-steel">.env.local</code>.
             </p>
           </div>
         ) : (
@@ -51,7 +51,7 @@ export default async function AdminLoginPage({
                 name="email"
                 type="email"
                 required
-                className="w-full rounded-xl border border-white/15 bg-ink-raised px-4 py-3 text-ivory outline-none focus:border-gold"
+                className="w-full rounded-xl border border-white/15 bg-ink-raised px-4 py-3 text-ivory outline-none focus:border-steel"
               />
             </label>
             <label className="block">
@@ -60,12 +60,12 @@ export default async function AdminLoginPage({
                 name="password"
                 type="password"
                 required
-                className="w-full rounded-xl border border-white/15 bg-ink-raised px-4 py-3 text-ivory outline-none focus:border-gold"
+                className="w-full rounded-xl border border-white/15 bg-ink-raised px-4 py-3 text-ivory outline-none focus:border-steel"
               />
             </label>
             <button
               type="submit"
-              className="w-full rounded-full bg-gold px-7 py-3.5 font-mono text-sm font-medium uppercase tracking-[0.14em] text-ink transition-transform hover:scale-[1.02] hover:bg-gold-bright"
+              className="w-full rounded-full bg-steel px-7 py-3.5 font-mono text-sm font-medium uppercase tracking-[0.14em] text-ink transition-transform hover:scale-[1.02] hover:bg-steel-bright"
             >
               Войти
             </button>

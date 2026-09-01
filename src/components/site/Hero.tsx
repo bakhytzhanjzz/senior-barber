@@ -8,7 +8,7 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
       <div
         aria-hidden
         className="pointer-events-none absolute -top-40 right-[-10%] h-[560px] w-[560px] rounded-full opacity-20 blur-[120px]"
-        style={{ background: "radial-gradient(circle, #C9A227 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, #8F99A3 0%, transparent 70%)" }}
       />
       <div className="relative mx-auto max-w-6xl px-5 pb-20 pt-16 sm:px-8 sm:pb-28 sm:pt-24">
         <div className="fade-up">
@@ -24,7 +24,7 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             className="fade-up foil-sweep bg-clip-text text-transparent [animation-delay:120ms]"
             style={{
               backgroundImage:
-                "linear-gradient(100deg, #8A6417 0%, #F3D989 25%, #C9A227 45%, #F3D989 65%, #8A6417 100%)",
+                "linear-gradient(100deg, #4A525C 0%, #EAEEF1 25%, #8F99A3 45%, #EAEEF1 65%, #4A525C 100%)",
             }}
           >
             {dict.hero.headline}
@@ -40,13 +40,13 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         <div className="fade-up mt-9 flex flex-wrap items-center gap-4 [animation-delay:420ms]">
           <Link
             href={`/${locale}/booking`}
-            className="rounded-full bg-gold px-7 py-3.5 font-mono text-sm font-medium uppercase tracking-[0.14em] text-ink transition-transform hover:scale-[1.03] hover:bg-gold-bright"
+            className="rounded-full bg-steel px-7 py-3.5 font-mono text-sm font-medium uppercase tracking-[0.14em] text-ink transition-transform hover:scale-[1.03] hover:bg-steel-bright"
           >
             {dict.hero.ctaPrimary}
           </Link>
           <a
             href="#services"
-            className="rounded-full border border-ivory/20 px-7 py-3.5 font-mono text-sm uppercase tracking-[0.14em] text-ivory/80 transition-colors hover:border-gold hover:text-gold"
+            className="rounded-full border border-ivory/20 px-7 py-3.5 font-mono text-sm uppercase tracking-[0.14em] text-ivory/80 transition-colors hover:border-steel hover:text-steel"
           >
             {dict.hero.ctaSecondary}
           </a>
@@ -54,13 +54,13 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
 
         <div className="fade-up mt-16 flex flex-wrap gap-x-10 gap-y-6 border-t border-ink-line/70 pt-8 [animation-delay:520ms]">
           <div>
-            <p className="font-display text-3xl font-bold text-gold">{dict.hero.stat1Value}</p>
+            <p className="font-display text-3xl font-bold text-steel">{dict.hero.stat1Value}</p>
             <p className="mt-1 font-mono text-xs uppercase tracking-[0.14em] text-ivory/50">
               {dict.hero.stat1Label}
             </p>
           </div>
           <div>
-            <p className="font-display text-3xl font-bold text-gold">{dict.hero.stat2Value}</p>
+            <p className="font-display text-3xl font-bold text-steel">{dict.hero.stat2Value}</p>
             <p className="mt-1 font-mono text-xs uppercase tracking-[0.14em] text-ivory/50">
               {dict.hero.stat2Label}
             </p>

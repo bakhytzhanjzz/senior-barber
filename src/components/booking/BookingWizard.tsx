@@ -75,14 +75,14 @@ export function BookingWizard({ locale, dict }: Props) {
   if (result !== "idle") {
     return (
       <div className="mx-auto max-w-lg px-5 py-24 text-center sm:px-8">
-        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-gold/50 text-2xl text-gold">
+        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-steel/50 text-2xl text-steel">
           ✓
         </div>
         <h1 className={`mt-8 ${headingFont(locale)} text-3xl font-bold text-ivory`}>{dict.booking.successTitle}</h1>
         <p className="mt-4 text-ivory/65">{dict.booking.successBody}</p>
 
         {result === "demo" && (
-          <p className="mt-6 rounded-xl border border-gold/25 bg-gold/5 px-4 py-3 font-mono text-xs uppercase tracking-[0.1em] text-gold/80">
+          <p className="mt-6 rounded-xl border border-steel/25 bg-steel/5 px-4 py-3 font-mono text-xs uppercase tracking-[0.1em] text-steel/80">
             Demo mode — Supabase не подключён, запись не сохранена
           </p>
         )}
@@ -97,7 +97,7 @@ export function BookingWizard({ locale, dict }: Props) {
 
         <Link
           href={`/${locale}`}
-          className="mt-10 inline-block rounded-full bg-gold px-7 py-3.5 font-mono text-sm font-medium uppercase tracking-[0.14em] text-ink transition-transform hover:scale-[1.03] hover:bg-gold-bright"
+          className="mt-10 inline-block rounded-full bg-steel px-7 py-3.5 font-mono text-sm font-medium uppercase tracking-[0.14em] text-ink transition-transform hover:scale-[1.03] hover:bg-steel-bright"
         >
           {dict.booking.successBack}
         </Link>
@@ -109,7 +109,7 @@ export function BookingWizard({ locale, dict }: Props) {
 
   return (
     <div className="mx-auto max-w-2xl px-5 py-16 sm:px-8 sm:py-20">
-      <p className="font-mono text-xs uppercase tracking-[0.3em] text-gold">{dict.booking.title}</p>
+      <p className="font-mono text-xs uppercase tracking-[0.3em] text-steel">{dict.booking.title}</p>
       <h1 className={`mt-4 ${headingFont(locale)} text-3xl font-bold text-ivory sm:text-4xl`}>{dict.booking.subtitle}</h1>
 
       <ol className="mt-10 flex flex-wrap gap-x-6 gap-y-3">
@@ -117,12 +117,12 @@ export function BookingWizard({ locale, dict }: Props) {
           <li
             key={label}
             className={`flex items-center gap-2 font-mono text-xs uppercase tracking-[0.12em] ${
-              i === step ? "text-gold" : i < step ? "text-ivory/60" : "text-ivory/25"
+              i === step ? "text-steel" : i < step ? "text-ivory/60" : "text-ivory/25"
             }`}
           >
             <span
               className={`flex h-6 w-6 items-center justify-center rounded-full border text-[10px] ${
-                i <= step ? "border-gold text-gold" : "border-ivory/25"
+                i <= step ? "border-steel text-steel" : "border-ivory/25"
               }`}
             >
               {String(i + 1).padStart(2, "0")}
@@ -144,14 +144,14 @@ export function BookingWizard({ locale, dict }: Props) {
                   setStep(1);
                 }}
                 className={`grid w-full grid-cols-[1fr_auto_auto] items-center gap-4 px-6 py-5 text-left transition-colors hover:bg-white/[0.04] ${
-                  serviceId === s.id ? "bg-gold/5" : ""
+                  serviceId === s.id ? "bg-steel/5" : ""
                 }`}
               >
                 <span className={`${headingFont(locale)} text-lg font-medium text-ivory`}>{s.name[locale]}</span>
                 <span className="hidden font-mono text-xs uppercase tracking-[0.1em] text-ivory/50 sm:block">
                   {s.durationMin} {dict.services.durationUnit}
                 </span>
-                <span className="justify-self-end font-mono text-base font-medium text-gold">
+                <span className="justify-self-end font-mono text-base font-medium text-steel">
                   {s.price.toLocaleString("ru-RU")} {dict.booking.tenge}
                 </span>
               </button>
@@ -169,7 +169,7 @@ export function BookingWizard({ locale, dict }: Props) {
                   type="button"
                   onClick={() => setDateStr(d.dateStr)}
                   className={`flex shrink-0 flex-col items-center rounded-xl border px-4 py-3 transition-colors ${
-                    dateStr === d.dateStr ? "border-gold bg-gold/10 text-gold" : "border-white/10 text-ivory/70 hover:border-gold/40"
+                    dateStr === d.dateStr ? "border-steel bg-steel/10 text-steel" : "border-white/10 text-ivory/70 hover:border-steel/40"
                   }`}
                 >
                   <span className="font-mono text-[10px] uppercase tracking-[0.1em]">
@@ -202,8 +202,8 @@ export function BookingWizard({ locale, dict }: Props) {
                     }}
                     className={`rounded-xl border px-3 py-2.5 font-mono text-sm transition-colors ${
                       slot?.startIso === s.startIso
-                        ? "border-gold bg-gold/10 text-gold"
-                        : "border-white/10 text-ivory/80 hover:border-gold/40"
+                        ? "border-steel bg-steel/10 text-steel"
+                        : "border-white/10 text-ivory/80 hover:border-steel/40"
                     }`}
                   >
                     {s.label}
@@ -216,7 +216,7 @@ export function BookingWizard({ locale, dict }: Props) {
         {step === 2 && service && slot && (
           <div className="grid gap-8 sm:grid-cols-[1fr_1.1fr]">
             <div className="rounded-2xl border border-white/10 bg-ink-raised p-6">
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold/80">{dict.booking.summaryTitle}</p>
+              <p className="font-mono text-xs uppercase tracking-[0.2em] text-steel/80">{dict.booking.summaryTitle}</p>
               <div className="mt-4 space-y-3">
                 <SummaryRow label={dict.booking.addressLabel} value={location.address} />
                 <SummaryRow label={dict.booking.steps.service} value={service.name[locale]} />
@@ -241,7 +241,7 @@ export function BookingWizard({ locale, dict }: Props) {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder={dict.booking.namePlaceholder}
-                  className="w-full rounded-xl border border-white/15 bg-ink px-4 py-3 text-ivory placeholder:text-ivory/30 outline-none focus:border-gold"
+                  className="w-full rounded-xl border border-white/15 bg-ink px-4 py-3 text-ivory placeholder:text-ivory/30 outline-none focus:border-steel"
                 />
               </Field>
               <Field label={dict.booking.phoneLabel}>
@@ -255,7 +255,7 @@ export function BookingWizard({ locale, dict }: Props) {
                     const el = e.currentTarget;
                     requestAnimationFrame(() => el.setSelectionRange(el.value.length, el.value.length));
                   }}
-                  className="w-full rounded-xl border border-white/15 bg-ink px-4 py-3 font-mono text-ivory outline-none focus:border-gold"
+                  className="w-full rounded-xl border border-white/15 bg-ink px-4 py-3 font-mono text-ivory outline-none focus:border-steel"
                 />
               </Field>
               <Field label={dict.booking.commentLabel}>
@@ -264,7 +264,7 @@ export function BookingWizard({ locale, dict }: Props) {
                   onChange={(e) => setNote(e.target.value)}
                   placeholder={dict.booking.commentPlaceholder}
                   rows={3}
-                  className="w-full rounded-xl border border-white/15 bg-ink px-4 py-3 text-ivory placeholder:text-ivory/30 outline-none focus:border-gold"
+                  className="w-full rounded-xl border border-white/15 bg-ink px-4 py-3 text-ivory placeholder:text-ivory/30 outline-none focus:border-steel"
                 />
               </Field>
 
@@ -277,7 +277,7 @@ export function BookingWizard({ locale, dict }: Props) {
               <button
                 type="submit"
                 disabled={submitting || !name.trim() || phoneDigits.length < KZ_PHONE_DIGITS}
-                className="w-full rounded-full bg-gold px-7 py-3.5 font-mono text-sm font-medium uppercase tracking-[0.14em] text-ink transition-transform hover:scale-[1.02] hover:bg-gold-bright disabled:opacity-40 disabled:hover:scale-100"
+                className="w-full rounded-full bg-steel px-7 py-3.5 font-mono text-sm font-medium uppercase tracking-[0.14em] text-ink transition-transform hover:scale-[1.02] hover:bg-steel-bright disabled:opacity-40 disabled:hover:scale-100"
               >
                 {submitting ? dict.booking.submitting : dict.booking.submit}
               </button>
@@ -295,7 +295,7 @@ export function BookingWizard({ locale, dict }: Props) {
         <button
           type="button"
           onClick={() => setStep((s) => Math.max(0, s - 1))}
-          className="mt-10 font-mono text-xs uppercase tracking-[0.16em] text-ivory/50 hover:text-gold"
+          className="mt-10 font-mono text-xs uppercase tracking-[0.16em] text-ivory/50 hover:text-steel"
         >
           ← {dict.booking.back}
         </button>

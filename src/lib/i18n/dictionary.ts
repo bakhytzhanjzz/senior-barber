@@ -19,7 +19,7 @@ export type Dictionary = {
     stat2Value: string;
     stat2Label: string;
   };
-  ticker: { label: string };
+  ticker: { label: string; promo: string };
   services: {
     eyebrow: string;
     title: string;
@@ -37,6 +37,7 @@ export type Dictionary = {
     callLabel: string;
     bookLabel: string;
     mapLabel: string;
+    instagramLabel: string;
   };
   cta: {
     title: string;
@@ -86,9 +87,9 @@ export type Dictionary = {
 export const dictionaries = {
   ru: {
     meta: {
-      title: "Senior — барбершоп в Астане",
+      title: "Abyroi Barbershop — барбершоп в Астане",
       description:
-        "Senior — барбершоп на Мәңгілік Ел, 51/2. Онлайн-запись, запись по телефону и WhatsApp.",
+        "Abyroi Barbershop — барбершоп на ул. Жұмекен Нәжімеденов, 29. Онлайн-запись, запись по телефону и WhatsApp.",
     },
     nav: {
       services: "Услуги",
@@ -98,18 +99,18 @@ export const dictionaries = {
       switchLocale: "ҚАЗ",
     },
     hero: {
-      eyebrow: "Барбершоп Senior · Мәңгілік Ел, 51/2",
-      headline: "ТОП стрижка",
-      headlineAccent: "за ТОП цену.",
-      sub: "Мужской барбершоп с классической школой и авторским подходом. Один клик — и вы записаны, без звонков и ожидания ответа в директе.",
+      eyebrow: "Барбершоп Abyroi · ул. Жұмекен Нәжімеденов, 29",
+      headline: "Мастерство,",
+      headlineAccent: "достойное уважения.",
+      sub: "Мужской барбершоп с классической школой и вниманием к деталям. Опытные барберы, стрижки от 4000 ₸ — запишитесь онлайн за минуту.",
       ctaPrimary: "Записаться онлайн",
       ctaSecondary: "Смотреть услуги",
       stat1Value: "10:00–20:00",
       stat1Label: "ежедневно, без выходных",
-      stat2Value: "+7 775 909-09-96",
+      stat2Value: "+7 702 507-51-61",
       stat2Label: "запись по телефону и WhatsApp",
     },
-    ticker: { label: "Barbershop Senior" },
+    ticker: { label: "Barbershop Abyroi", promo: "🎁 Воск и маска в подарок" },
     services: {
       eyebrow: "Прайс",
       title: "Услуги и цены",
@@ -120,13 +121,14 @@ export const dictionaries = {
     },
     locations: {
       eyebrow: "Адрес",
-      title: "Приходите в Senior",
+      title: "Приходите в Abyroi",
       subtitle: "Одна точка в Астане — записывайтесь онлайн, по телефону или в WhatsApp.",
       hoursLabel: "Часы работы",
       whatsappLabel: "Написать в WhatsApp",
       callLabel: "Позвонить",
       bookLabel: "Записаться онлайн",
-      mapLabel: "Показать на карте",
+      mapLabel: "Показать на 2ГИС",
+      instagramLabel: "Instagram",
     },
     cta: {
       title: "Готовы к новой стрижке?",
@@ -134,7 +136,7 @@ export const dictionaries = {
       button: "Записаться онлайн",
     },
     footer: {
-      tagline: "ТОП стрижка за ТОП цену",
+      tagline: "Опытные барберы · стрижки от 4000 ₸",
       rights: "Все права защищены.",
       admin: "Вход для персонала",
     },
@@ -191,9 +193,9 @@ export const dictionaries = {
   },
   kk: {
     meta: {
-      title: "Senior — Астанадағы барбершоп",
+      title: "Abyroi Barbershop — Астанадағы барбершоп",
       description:
-        "Senior барбершобы Мәңгілік Ел, 51/2 мекенжайында. Онлайн жазылу, телефон және WhatsApp арқылы жазылу.",
+        "Abyroi Barbershop Жұмекен Нәжімеденов көшесі, 29 мекенжайында. Онлайн жазылу, телефон және WhatsApp арқылы жазылу.",
     },
     nav: {
       services: "Қызметтер",
@@ -203,18 +205,18 @@ export const dictionaries = {
       switchLocale: "RUS",
     },
     hero: {
-      eyebrow: "Barbershop Senior · Мәңгілік Ел, 51/2",
-      headline: "ТОП шаш үлгісі",
-      headlineAccent: "ТОП бағаға.",
-      sub: "Классикалық мектеп пен авторлық көзқарасты ұштастырған ерлер барбершобы. Бір басу — және сіз жазылдыңыз, қоңырау мен директегі жауапты күтусіз.",
+      eyebrow: "Barbershop Abyroi · Жұмекен Нәжімеденов көшесі, 29",
+      headline: "Абыройға",
+      headlineAccent: "лайық қырқым.",
+      sub: "Классикалық мектеп пен егжей-тегжейге көңіл бөлетін ерлер барбершобы. Тәжірибелі барберлер, 4000 ₸-ден бастап қызметтер — онлайн жазылу бір минут алады.",
       ctaPrimary: "Онлайн жазылу",
       ctaSecondary: "Қызметтерді көру",
       stat1Value: "10:00–20:00",
       stat1Label: "күн сайын, демалыссыз",
-      stat2Value: "+7 775 909-09-96",
+      stat2Value: "+7 702 507-51-61",
       stat2Label: "телефон және WhatsApp арқылы жазылу",
     },
-    ticker: { label: "Barbershop Senior" },
+    ticker: { label: "Barbershop Abyroi", promo: "🎁 Балауыз бен маска сыйлыққа" },
     services: {
       eyebrow: "Баға",
       title: "Қызметтер мен бағалар",
@@ -225,13 +227,14 @@ export const dictionaries = {
     },
     locations: {
       eyebrow: "Мекенжай",
-      title: "Senior-ге келіңіз",
+      title: "Abyroi-ге келіңіз",
       subtitle: "Астанадағы бір нүкте — онлайн, телефон немесе WhatsApp арқылы жазылыңыз.",
       hoursLabel: "Жұмыс уақыты",
       whatsappLabel: "WhatsApp-қа жазу",
       callLabel: "Қоңырау шалу",
       bookLabel: "Онлайн жазылу",
-      mapLabel: "Картадан көру",
+      mapLabel: "2ГИС-тен көру",
+      instagramLabel: "Instagram",
     },
     cta: {
       title: "Жаңа шаш үлгісіне дайынсыз ба?",
@@ -239,7 +242,7 @@ export const dictionaries = {
       button: "Онлайн жазылу",
     },
     footer: {
-      tagline: "ТОП шаш үлгісі ТОП бағаға",
+      tagline: "Тәжірибелі барберлер · 4000 ₸-ден бастап",
       rights: "Барлық құқықтар қорғалған.",
       admin: "Қызметкерлер кіруі",
     },

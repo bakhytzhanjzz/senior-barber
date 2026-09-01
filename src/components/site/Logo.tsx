@@ -15,10 +15,10 @@ export function Logo({ className, withLabel = true }: LogoProps) {
         className="bg-clip-text font-display text-[1em] font-extrabold uppercase tracking-[0.04em] text-transparent"
         style={{
           backgroundImage:
-            "linear-gradient(100deg, #8A6417 0%, #F3D989 25%, #C9A227 45%, #F3D989 65%, #8A6417 100%)",
+            "linear-gradient(100deg, #4A525C 0%, #EAEEF1 25%, #8F99A3 45%, #EAEEF1 65%, #4A525C 100%)",
         }}
       >
-        Senior
+        Abyroi
       </span>
     </span>
   );

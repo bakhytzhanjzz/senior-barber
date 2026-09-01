@@ -21,8 +21,9 @@ const mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Senior — барбершоп в Астане",
-  description: "Senior — барбершоп на Мәңгілік Ел, 51/2. Онлайн-запись, услуги и цены.",
+  title: "Abyroi Barbershop — барбершоп в Астане",
+  description:
+    "Abyroi Barbershop — барбершоп на ул. Жұмекен Нәжімеденов, 29. Онлайн-запись, услуги и цены.",
 };
 
 export default function RootLayout({

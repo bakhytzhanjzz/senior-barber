@@ -18,18 +18,18 @@ export function ServicesMenu({ locale, dict }: { locale: Locale; dict: Dictionar
           <div
             key={s.id}
             className={`group grid grid-cols-[1fr_auto] items-center gap-x-4 gap-y-1.5 px-6 py-5 transition-colors hover:bg-white/[0.04] sm:grid-cols-[1fr_auto_auto] ${
-              s.featured ? "bg-gold/[0.06]" : ""
+              s.featured ? "bg-steel/[0.06]" : ""
             }`}
           >
             <p
-              className={`${headingFont(locale)} text-lg font-medium text-ivory transition-colors group-hover:text-gold sm:text-xl`}
+              className={`${headingFont(locale)} text-lg font-medium text-ivory transition-colors group-hover:text-steel sm:text-xl`}
             >
               {s.name[locale]}
             </p>
             <p className="hidden font-mono text-xs uppercase tracking-[0.1em] text-ivory/50 sm:block">
               {s.durationMin} {dict.services.durationUnit}
             </p>
-            <p className="justify-self-end font-mono text-base font-medium text-gold">
+            <p className="justify-self-end font-mono text-base font-medium text-steel">
               {s.price.toLocaleString("ru-RU")} {dict.booking.tenge}
             </p>
             {s.note && (
@@ -42,7 +42,7 @@ export function ServicesMenu({ locale, dict }: { locale: Locale; dict: Dictionar
       <div className="mt-10 flex justify-center">
         <Link
           href={`/${locale}/booking`}
-          className="rounded-full bg-gold px-7 py-3.5 font-mono text-sm font-medium uppercase tracking-[0.14em] text-ink transition-transform hover:scale-[1.03] hover:bg-gold-bright"
+          className="rounded-full bg-steel px-7 py-3.5 font-mono text-sm font-medium uppercase tracking-[0.14em] text-ink transition-transform hover:scale-[1.03] hover:bg-steel-bright"
         >
           {dict.services.cta}
         </Link>
@@ -64,7 +64,7 @@ export function SectionHeading({
 }) {
   return (
     <div className="max-w-xl">
-      <p className="font-mono text-xs uppercase tracking-[0.3em] text-gold">{eyebrow}</p>
+      <p className="font-mono text-xs uppercase tracking-[0.3em] text-steel">{eyebrow}</p>
       <h2 className={`mt-4 ${headingFont(locale)} text-3xl font-bold text-ivory sm:text-4xl`}>{title}</h2>
       <p className="mt-4 text-ivory/60">{subtitle}</p>
     </div>

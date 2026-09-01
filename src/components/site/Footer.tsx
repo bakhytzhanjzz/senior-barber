@@ -20,7 +20,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           </div>
 
           <div>
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold/80">{dict.nav.locations}</p>
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-steel/80">{dict.nav.locations}</p>
             <ul className="mt-4 space-y-2 text-sm text-ivory/70">
               <li>{location.address}</li>
               <li>{location.hours[locale]}</li>
@@ -28,15 +28,15 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           </div>
 
           <div>
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold/80">{dict.nav.services}</p>
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-steel/80">{dict.nav.services}</p>
             <ul className="mt-4 space-y-2 text-sm text-ivory/70">
               <li>
-                <a href="#services" className="hover:text-gold">
+                <a href="#services" className="hover:text-steel">
                   {dict.services.title}
                 </a>
               </li>
               <li>
-                <Link href={`/${locale}/booking`} className="hover:text-gold">
+                <Link href={`/${locale}/booking`} className="hover:text-steel">
                   {dict.nav.book}
                 </Link>
               </li>
@@ -44,10 +44,10 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           </div>
 
           <div>
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-gold/80">{dict.locations.callLabel}</p>
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-steel/80">{dict.locations.callLabel}</p>
             <ul className="mt-4 space-y-2 text-sm text-ivory/70">
               <li>
-                <a href={`tel:+${location.whatsapp}`} className="hover:text-gold">
+                <a href={`tel:+${location.whatsapp}`} className="hover:text-steel">
                   {formatKzPhoneDisplay(location.whatsapp.slice(1))}
                 </a>
               </li>
@@ -56,9 +56,19 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                   href={`https://wa.me/${location.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-gold"
+                  className="hover:text-steel"
                 >
                   {dict.locations.whatsappLabel}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={location.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-steel"
+                >
+                  {dict.locations.instagramLabel}
                 </a>
               </li>
             </ul>
@@ -67,11 +77,11 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
 
         <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-ink-line/70 pt-6 sm:flex-row sm:items-center">
           <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-ivory/35">
-            © {new Date().getFullYear()} Senior Barbershop. {dict.footer.rights}
+            © {new Date().getFullYear()} Abyroi Barbershop. {dict.footer.rights}
           </p>
           <Link
             href="/admin"
-            className="font-mono text-[11px] uppercase tracking-[0.14em] text-ivory/35 hover:text-gold"
+            className="font-mono text-[11px] uppercase tracking-[0.14em] text-ivory/35 hover:text-steel"
           >
             {dict.footer.admin}
           </Link>

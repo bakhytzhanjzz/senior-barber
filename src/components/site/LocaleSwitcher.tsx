@@ -16,7 +16,7 @@ export function LocaleSwitcher({ locale, label }: { locale: Locale; label: strin
       onClick={() => {
         document.cookie = `NEXT_LOCALE=${other};path=/;max-age=31536000`;
       }}
-      className="font-mono text-xs tracking-[0.2em] text-ivory/70 hover:text-gold transition-colors"
+      className="font-mono text-xs tracking-[0.2em] text-ivory/70 hover:text-steel transition-colors"
     >
       {label}
     </Link>

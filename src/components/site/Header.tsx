@@ -18,7 +18,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   return (
     <header className="sticky top-0 z-50 border-b border-ink-line/70 bg-ink/85 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
-        <Link href={`/${locale}`} aria-label="Senior Barbershop">
+        <Link href={`/${locale}`} aria-label="Abyroi Barbershop">
           <Logo className="text-xl sm:text-2xl" />
         </Link>
 
@@ -27,7 +27,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             <a
               key={l.href}
               href={l.href}
-              className="font-mono text-xs uppercase tracking-[0.18em] text-ivory/70 transition-colors hover:text-gold"
+              className="font-mono text-xs uppercase tracking-[0.18em] text-ivory/70 transition-colors hover:text-steel"
             >
               {l.label}
             </a>
@@ -38,7 +38,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <LocaleSwitcher locale={locale} label={dict.nav.switchLocale} />
           <Link
             href={`/${locale}/booking`}
-            className="rounded-full bg-gold px-5 py-2.5 font-mono text-xs font-medium uppercase tracking-[0.14em] text-ink transition-transform hover:scale-[1.03] hover:bg-gold-bright"
+            className="rounded-full bg-steel px-5 py-2.5 font-mono text-xs font-medium uppercase tracking-[0.14em] text-ink transition-transform hover:scale-[1.03] hover:bg-steel-bright"
           >
             {dict.nav.book}
           </Link>
@@ -51,8 +51,8 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           aria-label="Menu"
           aria-expanded={open}
         >
-          <span className={`h-px w-6 bg-gold transition-transform ${open ? "translate-y-[3.5px] rotate-45" : ""}`} />
-          <span className={`h-px w-6 bg-gold transition-transform ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`} />
+          <span className={`h-px w-6 bg-steel transition-transform ${open ? "translate-y-[3.5px] rotate-45" : ""}`} />
+          <span className={`h-px w-6 bg-steel transition-transform ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`} />
         </button>
       </div>
 
@@ -74,7 +74,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             <LocaleSwitcher locale={locale} label={dict.nav.switchLocale} />
             <Link
               href={`/${locale}/booking`}
-              className="rounded-full bg-gold px-5 py-2.5 font-mono text-xs font-medium uppercase tracking-[0.14em] text-ink"
+              className="rounded-full bg-steel px-5 py-2.5 font-mono text-xs font-medium uppercase tracking-[0.14em] text-ink"
             >
               {dict.nav.book}
             </Link>

@@ -27,7 +27,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   return (
     <>
       <Hero locale={locale} dict={dict} />
-      <Ticker label={dict.ticker.label} />
+      <Ticker label={dict.ticker.label} promo={dict.ticker.promo} />
       <ServicesMenu locale={locale} dict={dict} />
       <LocationsGrid locale={locale} dict={dict} />
       <CTASection locale={locale} dict={dict} />

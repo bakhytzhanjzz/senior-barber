@@ -1,6 +1,6 @@
 import { locations } from "@/lib/data/locations";
 
-export function Ticker({ label }: { label: string }) {
+export function Ticker({ label, promo }: { label: string; promo: string }) {
   return (
     <div className="overflow-hidden border-y border-ink-line/70 bg-ink-raised py-3">
       <div className="flex w-max animate-ticker gap-10">
@@ -11,11 +11,13 @@ export function Ticker({ label }: { label: string }) {
                 key={`${copy}-${loc.id}-${i}`}
                 className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-ivory/50"
               >
-                <span className="text-gold">{label}</span>
+                <span className="text-steel">{label}</span>
                 <span className="text-ivory/30">·</span>
                 <span>{loc.district}</span>
                 <span className="text-ivory/30">—</span>
                 <span>{loc.address}</span>
+                <span className="text-ivory/30">·</span>
+                <span className="text-steel-bright">{promo}</span>
               </span>
             ))}
           </div>

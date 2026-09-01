@@ -12,7 +12,7 @@ export async function generateMetadata({
   const { locale } = await params;
   if (!isLocale(locale)) return {};
   const dict = getDictionary(locale);
-  return { title: `${dict.booking.title} — Senior` };
+  return { title: `${dict.booking.title} — Abyroi` };
 }
 
 export default async function BookingPage({ params }: { params: Promise<{ locale: string }> }) {

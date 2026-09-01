@@ -19,19 +19,19 @@ export function LocationsGrid({ locale, dict }: { locale: Locale; dict: Dictiona
 
       <div className="mt-12 flex flex-col justify-between gap-8 rounded-2xl border border-white/10 bg-ink-raised p-8 sm:flex-row sm:items-center sm:p-10">
         <div>
-          {/* Always font-body: "Мәңгілік Ел" is a Kazakh place name even on the ru page,
+          {/* Always font-body: the street name is Kazakh even on the ru page,
               and Unbounded is missing several of its letters (see headingFont). */}
           <p className="font-body text-2xl font-semibold text-ivory">{location.address}</p>
           <p className="mt-2 text-sm text-ivory/55">
             {dict.locations.hoursLabel}: {location.hours[locale]}
           </p>
-          <p className="mt-1 font-mono text-sm text-gold">{formatKzPhoneDisplay(location.whatsapp.slice(1))}</p>
+          <p className="mt-1 font-mono text-sm text-steel">{formatKzPhoneDisplay(location.whatsapp.slice(1))}</p>
         </div>
 
         <div className="flex flex-wrap gap-3">
           <Link
             href={`/${locale}/booking`}
-            className="rounded-full bg-gold px-5 py-2.5 font-mono text-xs font-medium uppercase tracking-[0.14em] text-ink transition-transform hover:scale-[1.03] hover:bg-gold-bright"
+            className="rounded-full bg-steel px-5 py-2.5 font-mono text-xs font-medium uppercase tracking-[0.14em] text-ink transition-transform hover:scale-[1.03] hover:bg-steel-bright"
           >
             {dict.locations.bookLabel}
           </Link>
@@ -40,25 +40,34 @@ export function LocationsGrid({ locale, dict }: { locale: Locale; dict: Dictiona
             href={`https://wa.me/${location.whatsapp}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-ivory/20 px-5 py-2.5 font-mono text-xs uppercase tracking-[0.14em] text-ivory/80 transition-colors hover:border-gold hover:text-gold"
+            className="rounded-full border border-ivory/20 px-5 py-2.5 font-mono text-xs uppercase tracking-[0.14em] text-ivory/80 transition-colors hover:border-steel hover:text-steel"
           >
             {dict.locations.whatsappLabel}
           </a>
 
           <a
             href={`tel:+${location.whatsapp}`}
-            className="rounded-full border border-ivory/20 px-5 py-2.5 font-mono text-xs uppercase tracking-[0.14em] text-ivory/80 transition-colors hover:border-gold hover:text-gold"
+            className="rounded-full border border-ivory/20 px-5 py-2.5 font-mono text-xs uppercase tracking-[0.14em] text-ivory/80 transition-colors hover:border-steel hover:text-steel"
           >
             {dict.locations.callLabel}
           </a>
 
           <a
-            href={`https://maps.google.com/?q=${encodeURIComponent(location.mapQuery)}`}
+            href={location.mapUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-ivory/20 px-5 py-2.5 font-mono text-xs uppercase tracking-[0.14em] text-ivory/80 transition-colors hover:border-gold hover:text-gold"
+            className="rounded-full border border-ivory/20 px-5 py-2.5 font-mono text-xs uppercase tracking-[0.14em] text-ivory/80 transition-colors hover:border-steel hover:text-steel"
           >
             {dict.locations.mapLabel}
+          </a>
+
+          <a
+            href={location.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-ivory/20 px-5 py-2.5 font-mono text-xs uppercase tracking-[0.14em] text-ivory/80 transition-colors hover:border-steel hover:text-steel"
+          >
+            {dict.locations.instagramLabel}
           </a>
         </div>
       </div>

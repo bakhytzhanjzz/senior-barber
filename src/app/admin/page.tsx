@@ -16,7 +16,7 @@ const STATUS_LABEL: Record<BookingStatus, string> = {
 };
 
 const STATUS_TONE: Record<BookingStatus, string> = {
-  pending: "border-gold/40 text-gold",
+  pending: "border-steel/40 text-steel",
   confirmed: "border-emerald-400/40 text-emerald-300",
   cancelled: "border-white/15 text-ivory/40",
   completed: "border-white/15 text-ivory/50",
@@ -80,14 +80,14 @@ export default async function AdminDashboard({
   if (!isSupabaseConfigured) {
     return (
       <div className="flex min-h-screen items-center justify-center px-5">
-        <div className="w-full max-w-md rounded-2xl border border-gold/25 bg-gold/5 p-8 text-center">
+        <div className="w-full max-w-md rounded-2xl border border-steel/25 bg-steel/5 p-8 text-center">
           <div className="flex justify-center">
             <Logo className="text-2xl" />
           </div>
-          <p className="mt-6 font-mono text-xs uppercase tracking-[0.14em] text-gold">Supabase не подключён</p>
+          <p className="mt-6 font-mono text-xs uppercase tracking-[0.14em] text-steel">Supabase не подключён</p>
           <p className="mt-3 text-sm leading-relaxed text-ivory/70">
             Панель бронирований появится, как только сайт будет подключён к вашему проекту Supabase (см.{" "}
-            <code className="text-gold">supabase/schema.sql</code> и README).
+            <code className="text-steel">supabase/schema.sql</code> и README).
           </p>
         </div>
       </div>
@@ -132,7 +132,7 @@ export default async function AdminDashboard({
         <div className="flex items-center gap-4">
           <span className="hidden font-mono text-xs text-ivory/50 sm:inline">{staff?.full_name ?? user.email}</span>
           <form action={signOut}>
-            <button type="submit" className="font-mono text-xs uppercase tracking-[0.14em] text-ivory/50 hover:text-gold">
+            <button type="submit" className="font-mono text-xs uppercase tracking-[0.14em] text-ivory/50 hover:text-steel">
               Выйти
             </button>
           </form>
@@ -145,7 +145,7 @@ export default async function AdminDashboard({
             <Link
               href="/admin"
               className={`rounded-full border px-4 py-2 font-mono text-xs uppercase tracking-[0.1em] ${
-                !filterLocation ? "border-gold text-gold" : "border-white/15 text-ivory/60 hover:border-gold/40"
+                !filterLocation ? "border-steel text-steel" : "border-white/15 text-ivory/60 hover:border-steel/40"
               }`}
             >
               Все точки
@@ -155,7 +155,7 @@ export default async function AdminDashboard({
                 key={l.id}
                 href={`/admin?location=${l.slug}`}
                 className={`rounded-full border px-4 py-2 font-mono text-xs uppercase tracking-[0.1em] ${
-                  filterLocation?.id === l.id ? "border-gold text-gold" : "border-white/15 text-ivory/60 hover:border-gold/40"
+                  filterLocation?.id === l.id ? "border-steel text-steel" : "border-white/15 text-ivory/60 hover:border-steel/40"
                 }`}
               >
                 {l.address}
@@ -175,12 +175,12 @@ export default async function AdminDashboard({
             return (
               <div key={b.id}>
                 {showDateHeader && (
-                  <div className="border-t border-white/10 bg-white/[0.03] px-6 py-2 font-mono text-xs uppercase tracking-[0.14em] text-gold/80 first:border-t-0">
+                  <div className="border-t border-white/10 bg-white/[0.03] px-6 py-2 font-mono text-xs uppercase tracking-[0.14em] text-steel/80 first:border-t-0">
                     {dateLabel}
                   </div>
                 )}
                 <div className="grid grid-cols-1 items-center gap-3 border-t border-white/10 bg-ink-raised px-6 py-4 first:border-t-0 sm:grid-cols-[80px_1fr_auto_auto]">
-                  <p className="font-mono text-lg text-gold">{timeLabel}</p>
+                  <p className="font-mono text-lg text-steel">{timeLabel}</p>
                   <div>
                     <p className="font-body text-base font-semibold text-ivory">{b.customer_name}</p>
                     <p className="mt-0.5 text-sm text-ivory/55">
@@ -199,7 +199,7 @@ export default async function AdminDashboard({
                         <input type="hidden" name="status" value={action.status} />
                         <button
                           type="submit"
-                          className="rounded-full border border-white/15 px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.08em] text-ivory/70 hover:border-gold hover:text-gold"
+                          className="rounded-full border border-white/15 px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.08em] text-ivory/70 hover:border-steel hover:text-steel"
                         >
                           {action.label}
                         </button>

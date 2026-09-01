@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #0b0a08;
-  --ink-raised: #15130d;
-  --ink-line: #241f11;
+  --ink: #0a0a0d;
+  --ink-raised: #141419;
+  --ink-line: #26262e;
 
-  --gold: #c9a227;
-  --gold-bright: #f3d989;
-  --gold-deep: #8a6417;
+  --steel: #8f99a3;
+  --steel-bright: #eaeef1;
+  --steel-deep: #4a525c;
 
-  --ivory: #f3eee1;
+  --ivory: #eef0f1;
   --oxblood: #7a2a24;
   --oxblood-bright: #a8433a;
 }
@@ -26,9 +26,9 @@
   --color-ink-raised: var(--ink-raised);
   --color-ink-line: var(--ink-line);
 
-  --color-gold: var(--gold);
-  --color-gold-bright: var(--gold-bright);
-  --color-gold-deep: var(--gold-deep);
+  --color-steel: var(--steel);
+  --color-steel-bright: var(--steel-bright);
+  --color-steel-deep: var(--steel-deep);
 
   --color-ivory: var(--ivory);
   --color-oxblood: var(--oxblood);
@@ -86,7 +86,7 @@
 }
 
 * {
-  scrollbar-color: var(--gold-deep) var(--ink);
+  scrollbar-color: var(--steel-deep) var(--ink);
 }
 
 body {
@@ -95,6 +95,6 @@ body {
 }
 
 ::selection {
-  background: var(--gold);
+  background: var(--steel);
   color: var(--ink);
 }
